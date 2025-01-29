@@ -1,0 +1,177 @@
+.page{
+    overflow: initial;
+    background-color: rgb(242, 244, 247);
+    margin: auto;
+    padding-top: 72px;
+    padding-bottom: 112px;
+    font-family: Times;
+    background-size: auto;
+    background-origin: padding-box;
+}
+.menu{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    font-family: inherit;
+    font-family: SFProDisplay-Regular, Helvetica, Arial, sans-serif;
+    margin: 40px 40px 40px 40px;
+    justify-content: center;
+}
+.distance{
+    padding-right: 32px;
+}
+.menu div{
+    margin-bottom: 15px;
+    font-family: inherit;
+    font-family: SFProDisplay-Regular, Helvetica, Arial, sans-serif;
+}
+.square{
+    unicode-bidi: isolate;
+    background-color: rgb(255, 255, 255);
+    border-radius: 9px;
+    box-shadow:
+     0px 2px 4px rgba(0, 0, 0, .1),
+     0px 8px 16px rgba(0, 0, 0, .1);
+    text-align: center;
+    box-sizing: border-box;
+    width: 396px;
+    height: 350px;
+    padding-bottom :24px;
+    padding-left :0px;
+    padding-right: 0px;
+    padding-top :10px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 40px;
+    font-family: SFProDisplay-Regular, Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    line-height: 16px;
+    display: block;
+
+}
+.ima{
+    font-family: Times;
+    height:106px;
+    margin-bottom: -50px;
+    margin-left :-28px;
+    margin-right :-28px;
+    margin-top :-28px;
+    overflow-clip-margin:content-box;
+    overflow-x:clip;
+    display: block;
+    width: 320px;
+    border-image-slice: 100%;
+    border-image-source: none;
+    border-image-repeat: stretch;
+
+}
+.x{
+    color: rgb(28, 30, 33);
+    display:inline-block;
+    font-family: SFProDisplay-Regular, Helvetica,Arial, sans-serif;
+    font-weight: 400;
+    width: 500px;
+    height: 64px;
+    font-size: 28px;
+    line-height: 32px;
+    padding-bottom: 20px;
+    padding-top: 0;
+    text-rendering: optimizeLegibility;
+    unicode-bidi: isolate;
+}
+.l{
+    padding: 15px 15px 15px 15px;
+    font-family: SFProDisplay-Regular, Helvetica, Arial, sans-serif;
+}
+
+.line{
+    border-bottom: 2px #dadde1 solid ;
+    padding: 5px;
+    font-family: SFProDisplay-Regular, Helvetica, Arial, sans-serif;
+}
+input{
+    width: 90%;
+    height: 35px;
+    position: relative;
+    display:inline;
+    font-family: SFProDisplay-Regular, Helvetica, Arial, sans-serif;
+
+}
+button{
+    width: 90%;
+    color: white;
+    background-color: #1877f2;
+    height: 40px;
+    position: relative;
+    font-family: Helvetica, Arial, sans-serif;;
+    border-radius: 6px;
+    border-color: #1877f2;
+    border:none;
+    font-size: 100%;
+}
+button:hover{
+    background-color: rgba(24, 119, 242,0.95) ;
+    font-family: SFProDisplay-Regular, Helvetica, Arial, sans-serif;
+}
+.p{
+    text-decoration-line: none;
+    text-decoration-style: solid;
+    position: relative;
+    text-decoration-thickness: auto;
+    color: #0866ff;
+}
+.p a:hover{
+    color: #0866ff;
+    text-decoration:underline;
+    font-family: SFProDisplay-Regular, Helvetica, Arial, sans-serif;
+}
+.z{
+    color: white;
+    background-color: #42b72a;
+    border: #42b72a solid;
+    border-radius: 6px;
+    box-sizing: content-box;
+    box-shadow:
+     0px 2px 4px rgba(0, 0, 0, .1),
+     0px 8px 16px rgba(0, 0, 0, .1);
+    display: inline;
+    font-size: 20px;
+    padding: 10px 10px 10px 10px;
+    font-family: SFProDisplay-Regular, Helvetica, Arial, sans-serif;
+    display: inline-block;
+    justify-content: center;
+    position: relative;
+    text-decoration-line: none;
+    text-decoration-thickness: auto;
+    text-shadow: none;
+    text-decoration-style: solid;
+    -webkit-font-smoothing:antialiased;
+    width: 90%;
+    line-height: 15px;
+    font-family: SFProDisplay-Regular, Helvetica, Arial, sans-serif;
+}
+@media(max-width:600px) {
+    section{
+        -webkit-flex-direction:column;
+        flex-direction: column;
+    }
+    
+}
+div a:visited{
+    text-decoration: overline;
+}
+a, -webkit-any-link{
+        color: currentColor ;
+        cursor: pointer;
+        text-decoration: underline;
+    }
+.b a{
+    text-decoration-line: none ;
+    text-decoration-style: solid;
+    text-decoration-thickness: auto;
+    text-decoration-color: rgb(28, 30, 33);
+}
+.b a:hover{
+    text-decoration-line: underline;
+}
