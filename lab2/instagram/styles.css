@@ -1,0 +1,67 @@
+.layout{
+    display: flex;
+    flex-direction: row;
+    height: 628px;
+    justify-content: center;
+    width: 935px;
+    padding-bottom: 32px;
+    margin-top: 32px;
+    margin-left: 14px;
+    margin-right: 14px;
+    font-size: 14px;
+    color: black;
+}
+.back{
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    height: 660px;
+    width: 963px;
+}
+.ima-root{
+    align-items: center;
+    width: 585px;
+    height: 595px;
+}
+.ima{
+    margin-left: -55px;
+    height: 450px;
+    width: 552px;
+    object-fit: fill;
+    overflow-clip-margin: content-box;
+    overflow-x: clip;
+    overflow-y: clip;
+    border: none;
+    display: block;
+}
+.input-part{
+    margin-top: 12px;
+    width: 350px;
+    height: 585px;
+    display: flex;
+    flex-direction: column;
+}
+.log-part{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: inherit;
+    height: 390px;
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    position: relative;
+}
+.logo{
+    margin-top: 36px;
+    margin-bottom: 12px;
+    width: 175px;
+    height: 51px;
+    font-weight: 400;
+}
+.text-part{
+    width: inherit;
+    height: 277px;
+    margin-bottom: 12px;
+}
