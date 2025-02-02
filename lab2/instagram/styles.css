@@ -25,6 +25,7 @@
 }
 .ima{
     margin-left: -55px;
+    padding-left: 10px;
     height: 450px;
     width: 552px;
     object-fit: fill;
@@ -42,16 +43,27 @@
     flex-direction: column;
 }
 .log-part{
+    align-items: center;
+    background-color: rgb(255, 255, 255);
     padding-top: 10px;
     padding-bottom: 10px;
-    width: inherit;
+    margin-bottom: 10px;
+    width: 350px;
     height: 390px;
-    align-items: center;
-    box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    margin-bottom: 10px;
+    line-height: 18px;
     position: relative;
+}
+.log-part-in{
+    align-content: stretch;
+    align-items: stretch;
+    justify-content: flex-start;
+    margin-bottom: 12px;
+    margin-top:36px;
+    position: relative;
+    width: 175px;
+    height: 51px;
 }
 .logo{
     margin-top: 36px;
@@ -64,4 +76,131 @@
     width: inherit;
     height: 277px;
     margin-bottom: 12px;
+    display: block;
+}
+.z{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    height: 223px;
+    justify-content: flex-start;
+    line-height: 18px;
+    position: relative;
+    width: 350px;
+}
+.inp1{
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-bottom: 6px;
+    width: 270px;
+    height: 38px;
+    font-stretch: 100%;
+    font-weight: 400;
+    display: block;
+}
+.labl-root {
+    width: 268px;
+    height: 36px;
+    border: 1px solid rgb(219, 219, 219);
+    background-color: rgb(250, 250, 250);
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    padding: 0 8px;
+}
+.x{
+    width: 350px;
+    height: 277px;
+    margin-bottom: 12px;
+    display: block;
+    font-weight: 400;
+}
+.p{
+    width: 350px;
+    height: 277px;
+    display: flex;
+    flex-direction: column;
+}
+.input-in {
+    width: 100%;
+    height: 100%;
+    font-size: 12px;
+    border: none;
+    outline: none;
+    background: transparent;
+}
+.labl2-root{
+    display: block;
+    font-weight: 400;
+    height: 38px;
+    line-height: 18px;
+    margin-bottom: 6px;
+    margin-left: 40px;
+    margin-right: 40px;
+    width: 268px;
+}
+.labl2-in{
+    width: 268px;
+    height: 36px;
+    border: 1px solid rgb(219, 219, 219);
+    background-color: rgb(250, 250, 250);
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    padding: 0 8px;
+}
+.input-in2{
+    width: 100%;
+    height: 100%;
+    font-size: 12px;
+    border: none;
+    outline: none;
+    background: transparent;
+}
+.login{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    height: 32px;
+    width: 270px;
+    margin-bottom: 8px;
+    margin-left :40px;
+    margin-right: 40px;
+    margin-top :8px;
+    position: relative;
+}
+.buttom{
+    padding: 7px 16px;
+    width: 286px;
+    height: 288px;
+    background-color: rgba(0, 149, 246,0.7);
+    background-origin: padding-box;
+    border-color: rgb(255, 255, 255);
+    border-radius: 8px;
+    position: relative;
+    color: rgb(250, 250, 250);
+    box-sizing: border-box;
+    border: none;
+
+}
+.op{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 0px;
+    width: 288px;
+    margin-left: 40px;
+    margin-top: 10px;
+}
+.line1{
+    border-bottom: 2px rgb(156, 156, 156) solid ;
+    position: relative;
+    flex-grow: 1;
+    margin: 0 10px;
+    width: 100px;
+}
+.ili{
+    text-align: center;
 }
