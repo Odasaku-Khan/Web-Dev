@@ -1,0 +1,2 @@
+let EARTH;
+let currentVisitors;
