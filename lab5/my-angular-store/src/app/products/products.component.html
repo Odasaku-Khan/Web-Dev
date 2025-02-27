@@ -1,0 +1,19 @@
+<div class="products-container">
+    <div *ngFor="let product of products" class="product-card">
+      <div class="product-gallery">
+        <img [src]="product.imageUrls[0]" alt="{{ product.name }}" class="main-image">
+        <div class="thumbnail-container">
+          <img *ngFor="let img of product.imageUrls" [src]="img" class="thumbnail" (click)="product.imageUrls[0] = img">
+        </div>
+      </div>
+      <h2>{{ product.name }}</h2>
+      <p>{{ product.description }}</p>
+      <p>⭐ {{ product.rating }}/5</p>
+      <a [href]="product.link" target="_blank" class="buy-button">Buy Now</a>
+      <div class="share-buttons">
+        <button (click)="shareOnWhatsapp(product)">Share on WhatsApp</button>
+        <button (click)="shareOnTelegram(product)">Share on Telegram</button>
+      </div>
+    </div>
+  </div>
+  
