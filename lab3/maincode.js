@@ -1,17 +1,20 @@
+let taskInput=document.getElementById('INput');
+document.getElementById('BUTton').addEventListener('click',eventListener)
+document.getElementById('INput').addEventListener('keypress',eventListener)
+window.onload = loadTasks;
+let znum=0;
+
+let display=document.createElement('p');
+taskInput.parentElement.appendChild(display);
+
 function eventListener(event){
-    let taskInput=document.getElementById('INput');
-    if (event.type==='click') {
-        addTask(taskInput.value);
-        taskInput.value='';
-        taskInput.focus()
-    }else if(event.type==='keypress' && event.key==='Enter'){
+    if (event.type==='click' || (event.type==='keypress' && event.key==='Enter')){
         addTask(taskInput.value);
         taskInput.value='';
         taskInput.focus()
     }
 }
-document.getElementById('BUTton').addEventListener('click',eventListener)
-document.getElementById('INput').addEventListener('keypress',eventListener)
+
 function saveTasks(){
     let tasks=[];
     document.querySelectorAll('.list-item').forEach(item => {
@@ -32,7 +35,6 @@ function loadTasks() {
         }
     });
 }
-window.onload = loadTasks;
 
 function addTask(taskText) {
     let taskList=document.querySelector('.unknown-list');
@@ -50,17 +52,26 @@ function addTask(taskText) {
     let newChecker=document.createElement('input');
     newChecker.type='checkbox';
     newChecker.classList.add('check-box');
+
     newChecker.addEventListener('change',function () {
+        
+        if (newLi.classList.contains('done')) {
+            znum--;
+        } else {
+            znum++;
+        }
         newLi.classList.toggle('done');
+        display.innerHTML= znum;
         saveTasks();
     })
+
     let newDelete = document.createElement('button');
     newDelete.classList.add('delete-btn');
     newDelete.addEventListener('click', function() {
         taskList.removeChild(newLi);
         saveTasks();
     });
-
+    // document.appendChild(display);
     newLi.appendChild(newChecker);
     newLi.appendChild(document.createTextNode(taskText));
     newLi.appendChild(newDelete);

@@ -1,0 +1,47 @@
+.navigation-bar{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(48, 45, 45);
+    color: aliceblue;
+}
+.navigation-bar ul {
+    display: flex;
+    list-style-type: none;
+    border: none;
+    overflow: hidden;
+    gap: 5px;
+}
+.navigation-bar li {
+    margin-right: 20px;
+    width: 20%;
+}
+.navigation-bar li a {
+    display: block;
+    color: aliceblue;
+    text-align: center;
+    padding: 30px;
+    font-size: 150%;
+}
+.navigation-bar li a:hover {
+    background-color: rgb(0, 0, 0);
+}
+.navigation-bar li a:visited {
+    color: rgb(154, 154, 154);
+    text-decoration: underline;
+}
+.clickable-button button{
+    display: flex;
+    background-color: rgb(48, 45, 45);
+    color: white;
+    border: 50px;
+    padding: 20 px 60 px;
+    border-radius: 10 px;
+    cursor: help;
+    margin-right: 30px;
+    font-size: 150%;
+}
+.clickable-button button:hover{
+    background-color: black;
+    color: rgb(154, 154, 154);
+}

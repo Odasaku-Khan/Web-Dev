@@ -1,30 +1,30 @@
 .layout{
     display: flex;
-    flex-direction: row;
-    height: 628px;
+    /* flex-direction: column; */
     justify-content: center;
-    width: 935px;
-    padding-bottom: 32px;
-    margin-top: 32px;
+    /* align-self: start; */
+    /* padding-bottom: 32px; */
+    /* margin-top: 32px;
     margin-left: 14px;
-    margin-right: 14px;
+    margin-right: 14px; */
     font-size: 14px;
     color: black;
+    margin: 0 auto;
 }
 .back{
+    margin: 60px;
     background-color: rgb(255, 255, 255);
     display: flex;
     flex-direction: column;
-    height: 660px;
-    width: 963px;
+
+    align-items: center;
+    justify-content: center;
 }
 .ima-root{
-    align-items: center;
-    width: 585px;
-    height: 595px;
+    display: none;
 }
 .ima{
-    margin-left: -55px;
+    /* margin-left: -55px; */
     padding-left: 10px;
     height: 450px;
     width: 552px;
@@ -38,7 +38,7 @@
 .input-part{
     margin-top: 12px;
     width: 350px;
-    height: 585px;
+    height: 485px;
     display: flex;
     flex-direction: column;
 }
@@ -59,7 +59,7 @@
     align-content: stretch;
     align-items: stretch;
     justify-content: flex-start;
-    margin-bottom: 12px;
+    margin-bottom: 36px;
     margin-top:36px;
     position: relative;
     width: 175px;
@@ -164,7 +164,7 @@
     font-size: 14px;
     height: 32px;
     width: 270px;
-    margin-bottom: 8px;
+    margin-bottom: 20px;
     margin-left :40px;
     margin-right: 40px;
     margin-top :8px;
@@ -193,6 +193,7 @@
     width: 288px;
     margin-left: 40px;
     margin-top: 10px;
+    margin-bottom: 20px;
 }
 .line1{
     border-bottom: 2px rgb(156, 156, 156) solid ;
@@ -203,4 +204,146 @@
 }
 .ili{
     text-align: center;
+}
+.facebook{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    height: 20px;
+    width: 270px;
+    margin: 20px 40px 10px 90px;
+    justify-content: flex-start;
+    position: relative;
+}
+.facebook-button{
+    color: rgba(0, 149, 246,1);
+    display: block;
+    text-align: center;
+    position: relative;
+    border-width: 0;
+    height: 20px;
+    width: inherit;
+    background-color: rgb(255, 255, 255);
+}
+.direction{
+    display: flex;
+    flex-direction: row;
+    height: 20px;
+    width: 270px;
+}
+.facebook-icon{
+    display: flex;
+    flex-direction: column;
+    height: 25px;
+    width: 20px;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+}
+.svg-class{
+    position: relative;
+    text-align: center;
+    display: block;
+    fill: rgba(0, 149, 246,1);
+    height: 20px;
+    font-size: 20px;
+    width: inherit;
+}
+.main-link{
+    color: rgba(0, 149, 246,1);
+    display: flex;
+    flex-direction: column;
+    cursor: progress;
+    font-size: 18px;
+}
+.resetpass{
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    justify-content: center ;
+    align-items: center;
+    height: 18px;
+    width: 270px;
+    margin-top: 15px;
+    color: rgba(0, 149, 246,1);
+    align-self:center;
+}
+.resetpass-link{
+    box-sizing: border-box;
+    display: block;
+    height: 18px;
+    width: 270px;
+    color: rgb(11, 11, 11);
+    text-decoration-line: none;
+    text-align: center;
+    font-size: medium;
+    justify-content: center;
+    cursor: help;
+}
+.resetpass-link a:visited{
+    text-decoration: none;
+}
+.registration{
+    position: relative;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    color: black;
+    border: none;
+    padding: 10px 0px;
+    margin-bottom: 10px;
+}
+.info{
+    display: block;
+    height: 18px;
+    margin: 15px;
+    width: 315px;
+    font-size: 15px;
+}
+.sign-up{
+    box-sizing: border-box;
+    display: inline;
+    text-decoration-color: rgba(0, 149, 246,1);
+    text-decoration-line: none;
+    color: rgba(0, 149, 246,1);
+    font-size: 15px;
+    cursor:cell;
+}
+.dir{
+    width: 100%;
+    text-align: center;
+    margin: 100px 0;
+    height: 196px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+.dir p{
+    margin: 0;
+    font-size: 14px;
+
+}
+@media(min-width:1000px) {
+    .ima-root{
+        display: block;
+        align-items: center;
+        width: 585px;
+        height: 595px;
+    }
+    .layout{
+        flex-direction: row;
+    }
+}
+.app-store{
+    margin-top: 20px;
+    display: inline;
+    width: 136px;
+    height: 40px;
+}
+.google-play{
+    width: 136px;
+    height: 40px;
+    margin-top: 20px;
+    display: inline;
 }
