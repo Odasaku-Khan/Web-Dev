@@ -1,0 +1,16 @@
+<div *ngIf="photos && photos.length > 0">
+    <h2>Photos for Album {{ albumId }}</h2>
+    <div class="photo-gallery">
+      <div *ngFor="let photo of photos">
+        <img [src]="photo.URL" [alt]="photo.title" />
+        <p>{{ photo.title }}</p>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="photos.length === 0">
+    <p>No photos available for this album.</p>
+  </div>
+  
+  <!-- Return button to go back to the album details or album list -->
+  <button routerLink="/albums/{{ albumId }}">Return to Album</button>
+  
