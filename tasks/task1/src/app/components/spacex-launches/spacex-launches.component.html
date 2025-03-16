@@ -1,0 +1,6 @@
+<app-launch-filter (filterSuccess)="filterSuccesful()"></app-launch-filter>
+<ul>
+    <li *ngFor="let launch of filtered">
+        {{launch?.mission_name}} {{launch?.launch_year}} --Success:{{launch?.launch_success}}
+    </li>
+</ul>
