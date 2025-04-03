@@ -1,0 +1,4 @@
+<h2>Categories</h2>
+<div *ngFor="let category of categories">
+  <button class="btn btn-primary" (click)="showProducts(category.id)">{{ category.name }}</button>
+</div>
