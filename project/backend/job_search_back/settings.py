@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'chatbot',
     "phonenumber_field",
     'rest_framework',
+    'chat',
 ]
 
 MIDDLEWARE = [
@@ -84,7 +85,7 @@ DATABASES = {
         'NAME': 'postgres',
         'USER': 'masteruser',
         'PASSWORD': 'sudo645!',
-        'HOST': 'web-dev-project.cti8gg20o6b2.eu-north-1.rds.amazonaws.com',
+        'HOST': 'web-dev-project-db.cti8gg20o6b2.eu-north-1.rds.amazonaws.com',
         'PORT': '5432'
     }
 }
@@ -130,3 +131,8 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+REST_FRAMEWORK={
+    'DEFAULT_AUTHENTICATION_CLASSES':(
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+    ),
+}
