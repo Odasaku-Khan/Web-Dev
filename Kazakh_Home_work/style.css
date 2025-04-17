@@ -1,0 +1,306 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    background-image: url('img/background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* This makes the background static */
+    position: relative;
+}
+
+  body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.3);
+    pointer-events: none;
+  }
+
+  header, nav, main, footer {
+    position: relative;
+    z-index: 1;
+  }
+  nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 15px 0;
+    margin: 0;
+  }
+  
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+  }
+  
+  nav ul li a:hover {
+    color: #ffd700;
+  }
+  
+  .hero {
+    text-align: center;
+    padding: 80px 20px;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+  
+  .hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+  }
+  
+  .hero p {
+    font-size: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .btn {
+    display: inline-block;
+    background-color: #ffcc00;
+    color: #000;
+    padding: 10px 25px;
+    margin-top: 30px;
+    font-weight: bold;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: transform 0.3s;
+  }
+  
+  .btn:hover {
+    transform: scale(1.05);
+  }
+  
+  .features {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  .feature-boxes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+  }
+  
+  .feature-card {
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .feature-card img {
+    width: 100%;
+    border-radius: 8px;
+  }
+  
+  .feature-card h3 {
+    font-size: 22px;
+    margin-top: 15px;
+  }
+  
+  .feature-card p.short {
+    font-size: 16px;
+    margin: 10px 0;
+  }
+  
+  .feature-card .expanded-content {
+    display: none;
+    margin-top: 15px;
+  }
+  
+  .feature-card.expanded {
+    width: 95%;
+    max-width: 1100px;
+    background-color: rgba(255, 255, 255, 0.95);
+    color: #000;
+    z-index: 2;
+    position: relative;
+  }
+  
+  .feature-card.expanded .expanded-content {
+    display: block;
+  }
+  
+  .feature-card.expanded img {
+    margin-top: 15px;
+    border-radius: 10px;
+    width: 100%;
+  }
+  .fade-in-delay {
+    animation: fadeIn 1s ease-in-out forwards;
+    opacity: 0;
+    animation-delay: 0.5s;
+  }
+  
+  .slide-in-left {
+    animation: slideInLeft 1s ease-out forwards;
+    opacity: 0;
+  }
+  
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideInLeft {
+    from {
+      transform: translateX(-50px);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  /* === About Page Styling === */
+.about-section {
+    background-color: rgba(255, 255, 255, 0.1);
+    margin: 30px auto;
+    padding: 20px 30px;
+    border-left: 4px solid #ffcc00;
+    border-radius: 8px;
+    max-width: 1000px;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  }
+  
+  .about-section h2 {
+    color: #ffd700;
+    margin-bottom: 10px;
+  }
+  
+  .about-section p,
+  .about-section li {
+    font-size: 17px;
+    line-height: 1.6;
+    color: #322c2c;
+  }
+  
+  .about-section ul {
+    padding-left: 20px;
+    list-style: disc;
+  }
+  
+  /* Highlight active nav link */
+  nav ul li a.active {
+    font-weight: bold;
+    color: #ffcc00;
+    text-decoration: underline;
+  }
+  
+  /* Fade-in animation for about page */
+  .animated.fade-in {
+    animation: fadeIn 1.2s ease-in-out;
+  }
+  /* Section fade-in on scroll */
+.about-section {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+  
+  .about-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Header animation */
+  .slide-in-left {
+    animation: slideInLeft 1s ease-out forwards;
+    opacity: 0;
+  }
+  
+  @keyframes slideInLeft {
+    from {
+      transform: translateX(-50px);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  .registration-form {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .registration-form input,
+  .registration-form textarea {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  .services {
+    max-width: 800px;
+    margin: 60px auto;
+    text-align: center;
+  }
+  
+  .services ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .services li {
+    margin: 10px 0;
+    font-size: 18px;
+  }
+  
+  .zoom-in {
+    opacity: 0;
+    transform: scale(0.9);
+    transition: all 0.8s ease;
+  }
+  
+  .fade-in-delay {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.8s ease;
+  }
+  
+  .visible {
+    opacity: 1 !important;
+    transform: scale(1) translateY(0) !important;
+  }
+  
+  .pulse {
+    animation: pulseAnim 1.5s infinite;
+  }
+  
+  @keyframes pulseAnim {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }

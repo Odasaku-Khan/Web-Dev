@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+  <meta charset="UTF-8">
+  <title>Тіркелу | StartUpHub Qazaqstan</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Басты бет</a></li>
+        <li><a href="about.html">Біз туралы</a></li>
+        <li><a href="register.html">Тіркелу</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="animated fade-in">
+    <h1 class="slide-in-left">Тіркелу</h1>
+    <p class="fade-in-delay">Стартап қауымдастығына қосылып, мүмкіндіктер әлемін аш!</p>
+
+    <form class="registration-form zoom-in">
+      <input type="text" placeholder="Атыңыз" required>
+      <input type="email" placeholder="Email" required>
+      <input type="text" placeholder="Жоба атауы" required>
+      <textarea placeholder="Қысқаша сипаттама" rows="4" required></textarea>
+      <button type="submit" class="btn pulse">Тіркелу</button>
+    </form>
+
+    <section class="services fade-in-delay">
+      <h2>Біздің қызметтер</h2>
+      <ul>
+        <li>Стартап акселерациясы</li>
+        <li>Менторлық қолдау</li>
+        <li>Инвесторлармен кездесу</li>
+        <li>Нетворкинг және іс-шаралар</li>
+        <li>Жаңалықтар мен гранттар туралы ақпарат</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 StartUpHub Qazaqstan</p>
+  </footer>
+
+  <script>
+    const animatedEls = document.querySelectorAll('.fade-in-delay, .zoom-in');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.2 });
+
+    animatedEls.forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>

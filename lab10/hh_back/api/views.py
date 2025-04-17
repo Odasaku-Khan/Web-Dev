@@ -4,8 +4,6 @@ from django.shortcuts import get_object_or_404, render
 from django.http import HttpResponse, JsonResponse
 from .models import Company,Vacancy
 from .serializer import CompanySerializer,VacationSerializer
-def placeholder(request):
-    return HttpResponse("I`m lazy to finish it")
 class companyList(viewsets.ModelViewSet):
     queryset=Company.objects.all()
     serializer_class=CompanySerializer

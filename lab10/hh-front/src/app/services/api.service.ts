@@ -13,7 +13,7 @@ export class ApiService {
   constructor(private http: HttpClient) {}
 
   getCompanies(): Observable<Company[]> {
-    return this.http.get<Company[]>(`${this.baseUrl}/companies/`);
+    return this.http.get<Company[]>(`${this.baseUrl}/companies/companyList/`);
   }
 
   getCompanyVacancies(companyId: number): Observable<Vacancy[]> {

@@ -16,16 +16,19 @@ export class CompanyListComponent implements OnInit {
 
   constructor(private apiService: ApiService) {}
 
-  ngOnInit(): void {
+  ngOnInit(){
     this.apiService.getCompanies().subscribe(data => {
-      this.companies = data;
+      this.companies = data; 
+      // let array=Object.values(this.companies)
+      console.log('Raw response from API:', data);
     });
   }
-
+  
   showVacancies(companyId: number): void {
     this.selectedCompanyId = companyId;
     this.apiService.getCompanyVacancies(companyId).subscribe(data => {
       this.vacancies = data;
+      console.log(data);
     });
   }
 }
