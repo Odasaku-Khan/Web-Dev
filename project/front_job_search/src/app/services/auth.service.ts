@@ -28,4 +28,11 @@ export class AuthService {
   isAuthenticated(): boolean{
     return !localStorage.getItem('access')
   }
+
+  register(username:string,password:string):Observable<any>{
+    return this.http.post('http://127.0.0.1:8000/register/',{
+      username,
+      password
+    });
+  }
 }
