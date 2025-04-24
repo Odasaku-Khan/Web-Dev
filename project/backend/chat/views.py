@@ -29,3 +29,12 @@ class MessageViewSet(viewsets.ModelViewSet):
         ).order_by('timestap')
         serializer=self.get_serializer(message,many=True)
         return Response(serializer.data)
+    @action(detail=False,methods=['post'],url_path='send')
+    def send_message(self,request):
+        sender=request.user.profile
+        receiver_id=request.data.get('receiver_id')
+        text=request.data.get('text')
+        receiver=get_object_or_404(Profile,id=receiver_id)
+        message=Message.objects.create(sender=sender,receiver=receiver,text=text)
+        serializer=self.get_serializer(message)
+        return Response(serializer.data)

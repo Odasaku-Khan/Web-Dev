@@ -26,6 +26,7 @@ urlpatterns = [
     path('skills/', include('skills.urls')),
     path('ai/', include('ai.urls')),
     path('',greeting,name='greeting'),
-    path('chat/',include('chat.urls'))
+    path('chat/',include('chat.urls')),
+    path('users/',include('users.urls'))
 
 ]

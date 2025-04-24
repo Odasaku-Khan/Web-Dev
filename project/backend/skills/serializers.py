@@ -7,7 +7,7 @@ class SkillSerializer(serializers.ModelSerializer):
         fields='__all__'
 
 class UserSkillSerializer(serializers.ModelSerializer):
-    skills=SkillSerializer()
+    skill=SkillSerializer()
     class Meta:
         model=UserSkills
-        fields=['skills','level']
+        fields=['skill','level']

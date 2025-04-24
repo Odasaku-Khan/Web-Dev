@@ -3,12 +3,14 @@ import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule,FormBuilder,FormGroup,Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AuthService } from '../../services/auth.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @Component({
   selector: 'app-login',
-  imports: [CommonModule,ReactiveFormsModule],
+  imports: [CommonModule,ReactiveFormsModule,HttpClientModule],
   templateUrl: './login.component.html',
-  styleUrl: './login.component.css'
+  styleUrl: './login.component.css',
+  standalone: true
 })
 export class LoginComponent {
   loginForm:FormGroup;
@@ -32,7 +34,7 @@ export class LoginComponent {
         next:(res)=>{
           localStorage.setItem('access',res.access);
           localStorage.setItem('refresh',res.refresh);
-          this.router.navigate(['/dashboard'])
+          this.router.navigate(['/dashboard/home'])
         },
         error:(err)=>{
           this.error='inavalid errors'

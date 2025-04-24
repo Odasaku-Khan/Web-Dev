@@ -12,10 +12,10 @@ interface Token{
   providedIn: 'root'
 })
 export class AuthService {
-  private baseUrl='http://127.0.0.1:8000'
+  private apiUrl='http://127.0.0.1:8000'
   constructor(private http: HttpClient) { }
   login(username:string,password:string):Observable<Token>{
-    return this.http.post<Token>(`${this.baseUrl}/tokrn/`,{
+    return this.http.post<Token>(`${this.apiUrl}/token/`,{
     username,
     password,
     })
@@ -26,7 +26,7 @@ export class AuthService {
   }
 
   isAuthenticated(): boolean{
-    return !localStorage.getItem('access')
+    return !!localStorage.getItem('access');
   }
 
   register(username:string,password:string):Observable<any>{

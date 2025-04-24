@@ -17,7 +17,10 @@ class UserSkillView(viewsets.ModelViewSet):
 
 @api_view(['GET'])
 def get_userSkills(request,id):
-    profile=get_object_or_404(Profile,id=id)
+    try:
+        profile=get_object_or_404(Profile,id=id)
+    except Profile.DoesntExist:
+        return Response({"error":"Profile not found"}, status=404)
     user_skills=UserSkills.objects.filter(user=profile)
     serializer=UserSkillSerializer(user_skills,many=True)
     return Response(serializer.data)
