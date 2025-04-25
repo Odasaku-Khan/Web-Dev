@@ -4,10 +4,10 @@ import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet,HttpClientModule],
+  imports: [RouterOutlet, HttpClientModule, ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
-  standalone:true
+  standalone:true,
 })
 export class AppComponent {
   title = 'front_job_search';

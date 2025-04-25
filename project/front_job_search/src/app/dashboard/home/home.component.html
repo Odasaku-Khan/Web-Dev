@@ -1,12 +1,62 @@
 <div class="container">
-    <h2>Welcome {{fullName}}</h2>
-
-    <div class="stats">
-        <p>Total Skill:{{skillCount}}</p>
-        <p>Total Messages:{{messageCount}}</p>
-    </div>
-    <div class="links">
-        <a routerLink='/dashboard/profile' > Go to Profile</a>
-        <a routerLink='/dashboard/skills' > Manage Skills</a>
-    </div>
-</div>
+    <!-- Header -->
+    <header class="header">
+      <h1 class="logo">JobConnect</h1>
+      <div class="auth-buttons">
+        <ng-container *ngIf="isLoggedIn; else userMenu">
+          <button (click)="navigateToLogin()">Войти</button>
+          <button class="primary" (click)="navigateToRegister()">Регистрация</button>
+        </ng-container>
+        <ng-template #userMenu>
+          <div class="user-info">
+            <span>{{ fullName }}</span>
+            <button class="logout" (click)="logout()">Выйти</button>
+          </div>
+        </ng-template>
+      </div>
+    </header>
+  
+    <!-- Hero Section -->
+    <section class="hero">
+      <h2>Найдите идеальную работу или специалиста</h2>
+      <p>JobConnect объединяет талантливых специалистов и ведущие компании. Начните свой путь к успеху прямо сейчас!</p>
+      <div class="hero-buttons">
+        <button (click)="navigateToJobList()">🔍 Найти вакансии</button>
+        <button (click)="navigateToSpecialists()">👤 Найти специалистов</button>
+      </div>
+    </section>
+  
+    <!-- Features -->
+    <section class="features">
+      <div class="card">
+        <h3>Для соискателей</h3>
+        <ul>
+          <li>Поиск вакансий по навыкам и опыту</li>
+          <li>Создание профессионального профиля</li>
+          <li>Прямое общение с работодателями</li>
+          <li>Управление откликами</li>
+        </ul>
+        <button class="primary" (click)="navigateToRegister()">Создать профиль</button>
+      </div>
+      <div class="card">
+        <h3>Для компаний</h3>
+        <ul>
+          <li>Размещение вакансий</li>
+          <li>Поиск кандидатов по навыкам</li>
+          <li>Управление откликами</li>
+          <li>Доступ к базе специалистов</li>
+        </ul>
+        <button class="primary" (click)="navigateToCreateVacancy()">Разместить вакансию</button>
+      </div>
+      <div class="card">
+        <h3>AI-ассистент</h3>
+        <ul>
+          <li>Умные рекомендации</li>
+          <li>Анализ резюме</li>
+          <li>Чат-бот</li>
+          <li>Персональные советы</li>
+        </ul>
+        <button class="primary" (click)="navigateToAiAssistant()">Попробовать AI-помощника</button>
+      </div>
+    </section>
+  </div>

@@ -34,7 +34,7 @@ export class LoginComponent {
         next:(res)=>{
           localStorage.setItem('access',res.access);
           localStorage.setItem('refresh',res.refresh);
-          this.router.navigate(['/dashboard/home'])
+          this.router.navigate(['/dashboard/profile'])
         },
         error:(err)=>{
           this.error='inavalid errors'

@@ -20,4 +20,5 @@ export class ApiService {
   delete<T>(endpoints:string):Observable<T>{
     return this.http.delete<T>(`${this.baseUrl}/${endpoints}`)
   }
+  
 }
